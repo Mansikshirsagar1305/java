@@ -1,53 +1,40 @@
-import java.util.Scanner;
-
-public class Primeno {
+class PrimeNo{
 
     public static void main(String[] args) {
-       
-
-        Scanner sc=new Scanner(System.in);
-         
-        System.out.println("Enter a Number");
-
-        int num=sc.nextInt();
+     
+        
+        int n=7;
         boolean prime=true;
 
-
-        if(num<=1){
+        if(n<=1){
             prime=false;
+
         }
+        else{
+            for(int i=2;i<=n/2;i++){
 
-        else
-        {
-            for(int i=2; i<num/2;i++){
-            
-                if(num % i == 0)
-
+                if(n %2 ==0)
                 {
-                        prime=false;
-                        break;
+                    prime=false;
+                    break;
+
                 }
             }
 
-                if(prime)
-                {
-                    System.out.println("No is prime");
-
-
-                }
-                else{
-                    System.out.println("NO is Not Prime");
-                }
-
-                sc.close();
-            
-
-
         }
+        if(prime)
+        {
 
-    
-
-
+            System.out.println("No is Prime");
+        }
+        else
+        {
+            
+            System.out.println("No is  Not Prime");
+        }
     }
-    
+
+
+
+
 }
